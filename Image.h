@@ -2,22 +2,29 @@
 class Image
 {
 public:
-	Image()
-	{
-		int X = 0;
-		int Y = 0;
-		int R = 0;
-		int G = 0;
-		int B = 0;
-	}
-	~Image() {}
+    Image()
+    {
+        X = 0;
+        Y = 0;
+        R = 0;
+        G = 0;
+        B = 0;//초기화
+    }
+    Image(int NewX, int NewY, int NewR, int NewG, int NewB)
+    {
+        X = NewX;
+        Y = NewY;
+        R = NewR;
+        G = NewG;
+        B = NewB;//동적할당 -> 메인에 포인터 사용
+    }
+    ~Image() {}
 
-	int X;
-	int Y;
-	int R;
-	int G;
-	int B;
-
+    int X;
+    int Y;
+    int R;
+    int G;
+    int B; //선언
 
 };
 
